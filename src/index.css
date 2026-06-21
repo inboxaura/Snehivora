@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 338 55% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 14% 97%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 30 14% 97%;
+    --muted-foreground: 0 0% 54%;
+    --accent: 338 55% 26%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0% / 0.08;
+    --input: 0 0% 0% / 0.08;
+    --ring: 338 55% 26%;
+    --radius: 0.25rem;
+
+    /* Custom design tokens */
+    --bg-primary: #FFFFFF;
+    --bg-warm: #FAF9F7;
+    --bg-dark: #0F0F0F;
+    --bg-dark-elevated: #1A1A1A;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-muted: #8A8A8A;
+    --text-inverse: #FFFFFF;
+    --accent-burgundy: #6B1D3F;
+    --accent-burgundy-light: #F5E6EC;
+    --accent-gold: #B8956A;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-dark: rgba(255, 255, 255, 0.08);
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 338 55% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 338 55% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.08;
+    --ring: 338 55% 40%;
+
+    --bg-primary: #0F0F0F;
+    --bg-warm: #1A1A1A;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --text-muted: #6A6A6A;
+    --text-inverse: #0F0F0F;
+    --accent-burgundy: #A84872;
+    --accent-burgundy-light: #2A1520;
+    --accent-gold: #C4A47A;
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-dark: rgba(255, 255, 255, 0.08);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 400ms ease, color 400ms ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-display-xl {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 1.05;
+  }
+
+  .text-display-lg {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 300;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+  }
+
+  .text-display-md {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .text-heading-sm {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .text-body-lg {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 1.6;
+  }
+
+  .text-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  .text-mono-lg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.0;
+  }
+
+  .text-mono-sm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .text-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .accent-burgundy {
+    color: var(--accent-burgundy);
+  }
+
+  .bg-accent-burgundy {
+    background-color: var(--accent-burgundy);
+  }
+
+  .bg-accent-burgundy-light {
+    background-color: var(--accent-burgundy-light);
+  }
+
+  .accent-gold {
+    color: var(--accent-gold);
+  }
+
+  .bg-warm {
+    background-color: var(--bg-warm);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .text-primary-custom {
+    color: var(--text-primary);
+  }
+
+  .text-secondary-custom {
+    color: var(--text-secondary);
+  }
+
+  .text-muted-custom {
+    color: var(--text-muted);
+  }
+}
