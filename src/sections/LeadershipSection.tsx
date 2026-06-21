@@ -131,13 +131,13 @@ export default function LeadershipSection() {
             </h2>
             <p className="text-body text-[var(--text-secondary)] mb-5">
               Alongside my finance career, I actively work to build awareness around
-              the CMA (US) certification across college campuses in India — a
+              the CMA (US) certification across college campuses in India, a
               designation that remains underrepresented despite its global value in
               management accounting and FP&amp;A.
             </p>
             <p className="text-body text-[var(--text-secondary)]">
               I am available for guest lectures, career guidance sessions, and panel
-              discussions — particularly for commerce departments and L&amp;D programs
+              discussions, particularly for commerce departments and L&amp;D programs
               looking for an industry perspective on finance careers, cost management,
               and professional certifications.
             </p>

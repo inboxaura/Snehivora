@@ -191,17 +191,19 @@ export default function HeroSection() {
         <div ref={metricsRef} className="flex flex-wrap gap-8 md:gap-10">
           {METRICS.map((metric, i) => (
             <div key={i} className="flex flex-col">
-              <span
-                className="text-mono-lg accent-burgundy metric-number"
-                data-target={metric.value}
-              >
-                0
-              </span>
+              <div className="flex items-baseline gap-0.5">
+                <span
+                  className="text-mono-lg accent-burgundy metric-number"
+                  data-target={metric.value}
+                >
+                  0
+                </span>
+                <span className="text-mono-lg accent-burgundy">
+                  {metric.suffix}
+                </span>
+              </div>
               <span className="text-mono-sm text-[var(--text-muted)] mt-1 metric-label opacity-0">
                 {metric.label}
-              </span>
-              <span className="text-mono-lg accent-burgundy absolute opacity-0 pointer-events-none">
-                {metric.suffix}
               </span>
             </div>
           ))}

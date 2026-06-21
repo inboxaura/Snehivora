@@ -1,10 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
-
-interface HeaderProps {
-  isDark: boolean;
-  toggleDark: () => void;
-}
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -14,7 +8,7 @@ const NAV_LINKS = [
   { label: 'Connect', href: '#connect' },
 ];
 
-export default function Header({ isDark, toggleDark }: HeaderProps) {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -51,10 +45,10 @@ export default function Header({ isDark, toggleDark }: HeaderProps) {
           }}
           className="font-display text-2xl font-medium tracking-tight text-[var(--text-primary)] hover:text-[var(--accent-burgundy)] transition-colors duration-300"
         >
-          SV
+          Snehi Vora
         </a>
 
-        {/* Nav links + dark mode */}
+        {/* Nav links */}
         <div className="flex items-center gap-6 md:gap-8">
           <nav className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
@@ -69,14 +63,6 @@ export default function Header({ isDark, toggleDark }: HeaderProps) {
               </a>
             ))}
           </nav>
-
-          <button
-            onClick={toggleDark}
-            className="p-2 rounded-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-warm)] transition-all duration-300"
-            aria-label="Toggle dark mode"
-          >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
         </div>
       </div>
     </header>

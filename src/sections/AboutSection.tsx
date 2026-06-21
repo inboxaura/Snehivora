@@ -99,17 +99,10 @@ export default function AboutSection() {
             >
               THE STORY
             </p>
-            <h2 className="text-display-md text-[var(--text-primary)] italic mb-8">
+            <h2 className="text-display-md text-[var(--text-primary)] italic">
               Finance isn't just about reporting numbers. It's about explaining what
               those numbers mean for the business.
             </h2>
-            <div className="w-[280px] h-[280px] rounded-sm overflow-hidden hidden md:block">
-              <img
-                src="/snehi_hero.jpg"
-                alt="Snehi Vora"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
           </div>
 
           {/* Right column - 55% */}
@@ -122,7 +115,7 @@ export default function AboutSection() {
               division.
             </p>
             <p className="about-para text-body text-[var(--text-secondary)] mb-6 opacity-0">
-              My work sits at the intersection of data and decision-making — covering
+              My work sits at the intersection of data and decision-making, covering
               inventory costing, variance analysis, month-end close, and process
               automation through VBA and SAP. I believe great finance teams don't just
               report numbers; they explain what those numbers mean and drive actionable

@@ -9,7 +9,7 @@ import LeadershipSection from './sections/LeadershipSection';
 import FutureSection from './sections/FutureSection';
 
 export default function App() {
-  const { isDark, toggle } = useDarkMode();
+  useDarkMode();
   useLenis(true);
 
   return (
@@ -17,7 +17,7 @@ export default function App() {
       className="relative min-h-screen"
       style={{ backgroundColor: 'var(--bg-primary)' }}
     >
-      <Header isDark={isDark} toggleDark={toggle} />
+      <Header />
       <main>
         <HeroSection />
         <ImpactSection />

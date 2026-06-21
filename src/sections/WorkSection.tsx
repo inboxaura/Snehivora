@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CURRENT_ROLE_BULLETS = [
   'Manage finance operations for 4 Co-pack Plants (800+ SKUs) and 1 Commercial Plant (1,000+ SKUs)',
-  'Automated recurring reports using SAP, VBA, and Excel Macros — 3+ scripts saving 5+ hours per month',
+  'Automated recurring reports using SAP, VBA, and Excel Macros, with 3+ scripts saving 5+ hours per month',
   'Prepare consolidated PPV reports for 5 plants; deliver monthly plant performance reporting for Hill\'s Division',
   'Perform inventory costing, variance analysis, MEC, SOX testing, and fixed asset capitalization',
 ];
@@ -25,28 +25,9 @@ const PREV_SKILLS = ['Tally ERP', 'GST Filing', 'Bookkeeping', 'Bank Reconciliat
 
 export default function WorkSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const quoteContainerRef = useRef<HTMLDivElement>(null);
-  const quoteFillRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Text reveal scroll effect for philosophy quote
-      if (quoteContainerRef.current && quoteFillRef.current) {
-        gsap.fromTo(
-          quoteFillRef.current,
-          { scaleX: 0 },
-          {
-            scaleX: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: quoteContainerRef.current,
-              start: 'top 70%',
-              end: 'bottom 40%',
-              scrub: true,
-            },
-          }
-        );
-      }
 
       // Card 1 slide from left
       const card1 = sectionRef.current?.querySelector('.work-card-1');
@@ -110,41 +91,11 @@ export default function WorkSection() {
             THE WORK
           </p>
 
-          {/* Scroll reveal quote container */}
-          <div
-            ref={quoteContainerRef}
-            className="relative text-center max-w-[800px] mx-auto overflow-hidden"
-          >
-            {/* Base layer - muted */}
-            <h2 className="text-display-lg text-[var(--text-muted)] relative z-10">
+          {/* Philosophy Statement Text */}
+          <div className="text-center max-w-[800px] mx-auto">
+            <h2 className="text-display-lg text-[var(--text-primary)]">
               I don't just close books. I open conversations.
             </h2>
-
-            {/* Fill layer - primary color, scales on scroll */}
-            <span
-              ref={quoteFillRef}
-              className="absolute inset-0 z-20 block origin-left"
-              style={{
-                transform: 'scaleX(0)',
-                background: `linear-gradient(to right, var(--text-primary), var(--text-primary))`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-              aria-hidden="true"
-            >
-              <h2
-                className="text-display-lg"
-                style={{
-                  background: `linear-gradient(to right, var(--text-primary), var(--text-primary))`,
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                I don't just close books. I open conversations.
-              </h2>
-            </span>
           </div>
 
           {/* Decorative line */}
@@ -173,7 +124,7 @@ export default function WorkSection() {
               Colgate Global Business Services
             </h3>
             <p className="text-mono-sm text-[var(--text-muted)] mb-1">
-              Jun 2024 — Present
+              Jun 2024 - Present
             </p>
             <p
               className="text-body mb-6"
@@ -225,7 +176,7 @@ export default function WorkSection() {
               Pankaj B Mehta
             </h3>
             <p className="text-mono-sm text-[var(--text-muted)] mb-6">
-              Feb 2023 — Sep 2023
+              Feb 2023 - Sep 2023
             </p>
 
             <ul className="space-y-3 mb-8">
