@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { useDarkMode } from './hooks/useDarkMode';
 import { useLenis } from './hooks/useLenis';
 import Header from './sections/Header';
@@ -26,6 +27,7 @@ export default function App() {
         <LeadershipSection />
         <FutureSection />
       </main>
+      <Analytics />
     </div>
   );
 }
