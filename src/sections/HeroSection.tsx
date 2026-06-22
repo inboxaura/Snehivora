@@ -173,7 +173,7 @@ export default function HeroSection() {
             View My Work
           </a>
           <a
-            href="/Snehi_Vora%20_Finance_Resume.pdf"
+            href="/Snehi_Vora_Finance_Resume.pdf"
             download="Snehi_Vora_Finance_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
